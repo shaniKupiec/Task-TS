@@ -3,7 +3,8 @@ import homePage from "../views/homePage.vue";
 import registerPage from "../views/registerPage.vue";
 import loginPage from "../views/loginPage.vue";
 import dashboardPage from "../views/dashboardPage.vue";
-import editTask from "../views/editTaskPage.vue";
+import editTask from "../components/editTask.vue";
+import taskList from "../components/taskList.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -25,11 +26,17 @@ const routes: Array<RouteRecordRaw> = [
     path: "/dashboard",
     name: "dashboard",
     component: dashboardPage,
-  },
-  {
-    path: "/editTask/:taskId?",
-    name: "editTask",
-    component: editTask,
+    children: [
+      {
+        path: 'task',
+        component: taskList
+      },
+      {
+        path: "editTask/:taskId?",
+        name: "editTask",
+        component: editTask,
+      }
+    ]
   },
   // {
   //   path: "/about",

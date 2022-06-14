@@ -5,9 +5,10 @@
       <img src="../assets/imgs/user-img.png" alt="" class="dashboard__head__user-img" />
       <div class="dashboard__head__welcome">Welcome {{ userName }}</div>
     </header>
-    <main class="dashboard__main">
+    <router-view class="dashboard__main" :tasks="tasks"></router-view>
+    <!-- <main class="dashboard__main">
       <task-list :tasks="tasks"></task-list>
-    </main>
+    </main> -->
   </div>
   <!-- <compostion-page class="hi"></compostion-page>
   <option-page class="hi2"></option-page> -->
@@ -15,7 +16,7 @@
 
 <script lang="ts">
 import { computed, defineComponent } from "vue";
-import taskList from "@/components/taskList.vue";
+// import taskList from "@/components/taskList.vue";
 // import compostionPage from "@/views/compostionPage.vue";
 // import optionPage from "@/views/optionPage.vue";
 import { useStore } from '../store'
@@ -38,7 +39,7 @@ export default defineComponent({
     };
   },
   components: {
-    taskList,
+    // taskList,
     // compostionPage,
     // optionPage,
   },

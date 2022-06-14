@@ -22,7 +22,7 @@ export default defineComponent({
     };
     const demo = async () => {
       await store.dispatch({ type: "demo" });
-      router.push(`/dashboard`);
+      router.push(`/dashboard/task`);
     };
 
     return {

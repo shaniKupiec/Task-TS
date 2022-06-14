@@ -23,7 +23,7 @@ export default defineComponent({
   setup() {
     const router = useRouter();
     const add = () => {
-      router.push(`/editTask`);
+      router.push(`/dashboard/editTask`);
     };
     return {
       add

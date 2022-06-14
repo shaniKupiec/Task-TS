@@ -36,7 +36,7 @@ export default defineComponent({
         password: password.value,
       };
       await store.dispatch({ type: "register", userInfo });
-      router.push(`/dashboard`);
+      router.push(`/dashboard/task`);
     };
 
     return {

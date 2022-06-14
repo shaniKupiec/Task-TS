@@ -1,17 +1,8 @@
 <template>
-  <div class="dashboard">
-    <header class="dashboard__head">
-      <div class="dashboard__head__block"></div>
-      <img src="../assets/imgs/user-img.png" alt="" class="dashboard__head__user-img" />
-      <div class="dashboard__head__welcome">Welcome {{ userName }}</div>
-    </header>
-    <main class="dashboard__main">
-      <input type="text" v-model="task.title" />
-      <input type="text" v-model="task.subtitle" />
-    </main>
+  <div class="edit">
+    <!-- <input type="text" v-model="task.title" /> -->
+    <!-- <input type="text" v-model="task.subtitle" /> -->
   </div>
-  <!-- <compostion-page class="hi"></compostion-page>
-  <option-page class="hi2"></option-page> -->
 </template>
 
 <script lang="ts">
